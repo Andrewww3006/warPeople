@@ -1,6 +1,5 @@
 package com.company;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 
 public class Main {
@@ -23,5 +22,10 @@ long workingPeople = people.stream().filter(s->s.getAge()>=18).filter(s->s.getSe
         System.out.println(workingPeople);
         people.stream().filter(s->s.getAge()>=18).filter(s->s.getSex()==Sex.WOMAN&&s.getAge()<55||
                 s.getSex()==Sex.MAN&&s.getAge()<60).forEach(s-> System.out.println(s.getName()));
+
+        Collection ordered = Arrays.asList("a9", "a8", "a2", "a3", "a1", "a2", "a1");
+        Collection nonOrdered = new HashSet<>(ordered);
+        ordered.stream().forEach(System.out::println);
+        nonOrdered.stream().forEach(System.out::println);
     }
 }
