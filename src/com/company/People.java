@@ -3,9 +3,10 @@ package com.company;
 public class People {
     private String name;
     private int age;
-    private String sex;
+    private Sex sex;
 
-    public People (String name, int age, String sex){
+
+    public People (String name, int age,Sex sex){
         this.name = name;
         this.age = age;
         this.sex = sex;
@@ -17,5 +18,9 @@ public class People {
     }
     public String getName(){
         return name;
+    }
+
+    public Sex getSex() {
+        return sex;
     }
 }
