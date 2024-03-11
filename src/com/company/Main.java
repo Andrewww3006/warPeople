@@ -25,7 +25,13 @@ long workingPeople = people.stream().filter(s->s.getAge()>=18).filter(s->s.getSe
 
         Collection ordered = Arrays.asList("a9", "a8", "a2", "a3", "a1", "a2", "a1");
         Collection nonOrdered = new HashSet<>(ordered);
-        ordered.stream().forEach(System.out::println);
-        nonOrdered.stream().forEach(System.out::println);
+        System.out.println("вывод исходного списка");
+        ordered.stream().forEach(System.out::print);
+        System.out.println("\nвывод HashSet");
+        nonOrdered.stream().forEach(System.out::print);
+        System.out.println("\nвывод при помощи distinct исходного списка");
+        ordered.stream().distinct().forEach(System.out::print);
+        System.out.println("\nвывод при помощи distinct HashSet");
+        nonOrdered.stream().distinct().forEach(System.out::print);
     }
 }
